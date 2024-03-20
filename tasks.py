@@ -18,6 +18,6 @@ logger.addHandler(handler)
 @celery_app.task(name='tasks.apiworld')
 def apiworld():
     logger.info('Demo task started!')
-    time.sleep(10)  # Simulate a task that takes 15 seconds to complete
+    time.sleep(10)  # Simulate a task that takes 10 seconds to complete
     logger.info('Demo task completed!')
     return 'Demo task completed!'
