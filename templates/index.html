@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celery Task Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;  /* This sets the maximum width of the container */
+    gap: 20px;  /* This creates a margin between the child elements */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* This centers the container */
+    z-index: 1000;  /* This ensures the container is above other elements */
+}
+
+#triggerButton, #statusDiv {
+    text-align: center;
+    width: 100%;  /* This makes the button and the div take up the full width of the container */
+}
+
+</style>
+
+</head>
+
+<body class="flex items-center justify-center h-screen">
+<div class="container">
+    <h1 class="text-center text-2xl font-bold text-blue-500">Test Celery Task</h1>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="triggerButton">TRIGGER TEST TASK</button>
+    <div id="statusDiv"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
